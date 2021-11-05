@@ -29,11 +29,14 @@ public class Linecomparison {
 		double length2 = Math.sqrt(Math.pow(x4-x3, 2) + Math.pow(y4-y3, 2));
 		Double line1 = new Double(length1);
 		Double line2 = new Double(length2);
-		if(line1.equals(line2)) {
+		if(line1.compareTo(line2) == 0) {
 			System.out.println("Both Lines are Equal");
 		}
-		else {
-			System.out.println("Both Lines are not Equal");
+		else if(line1.compareTo(line2) == 1){
+			System.out.println("Line1 is greater");
+		}
+		else if(line1.compareTo(line2) == -1) {
+			System.out.println("Line2 is greater");
 		}
 		sc.close();
 	}
